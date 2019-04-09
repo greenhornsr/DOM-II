@@ -40,8 +40,8 @@ aBlur.addEventListener('blur', function(event){
 const delay = 5;  // Your delay here
 
 const originalResize = function(event){
-  console.log(event);  // Your resize function here
-//   event.currentTarget.alert('test');
+//   console.log(event);  // Your resize function here
+  event.currentTarget.alert('you changed the screen size!');
 };
 
 (function(){
@@ -78,11 +78,33 @@ textSelect.addEventListener('select', function(event){
 // displayInput.addEventListener('select', selectionLog);
 
 // 8. dblclick
-const funBusImgDblClick = document.getElementById('fun-bus-img-header');
-console.log(funBusImgDblClick);
-funBusImgDblClick.addEventListener('dblclick', function(event){
-    funBusImgDblClick.src = "https://picsum.photos/800/240/?random";
-})
+    const funBusImgDblClick = document.getElementById('fun-bus-img-header');
+    console.log(funBusImgDblClick);
+    funBusImgDblClick.addEventListener('dblclick', function(){
+        funBusImgDblClick.src = "https://picsum.photos/800/240/?random";
+    })
+
+    const letsGoDblClick = document.getElementById('lets-go');
+    // console.log(letsGoDblClick);
+    letsGoDblClick.addEventListener('dblclick', function(){
+        letsGoDblClick.src = "https://picsum.photos/376/282/?random";
+    })
+
+    // Adventure Awaits IMG DblClick
+    const advAwaitsDblClick = document.getElementById('advawaits');
+    // console.log(advAwaitsDblClick);
+    advAwaitsDblClick.addEventListener('dblclick', function(){
+        advAwaitsDblClick.src = "https://picsum.photos/376/282/?random";
+    })
+
+
+    // Pick Your Destination IMG DblClick
+    const pydDblClick = document.getElementById('pydest');
+    // console.log(pydDblClick);
+    pydDblClick.addEventListener('dblclick', function(){
+        pydDblClick.src = "https://picsum.photos/600/200/?random";
+    })
+
 
 // 9. DENIED on click - this is child click event
 const btnClick = document.getElementsByClassName('btn');
