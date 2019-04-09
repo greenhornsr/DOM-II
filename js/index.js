@@ -117,3 +117,13 @@ contentDivClick.addEventListener('click', function(event){
     event.currentTarget.style.border = "3px solid yellow";
     // event.currentTarget.style.background = "red";
 })
+
+// 12. preventDefault on nav link
+const stopNav = document.querySelector('.nav');
+console.log(stopNav);
+stopNav.addEventListener('click', function(event){
+    event.preventDefault();
+})
+
+
+
