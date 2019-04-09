@@ -4,7 +4,7 @@
 const h1FunBusLogoHeading = document.querySelector('.logo-heading');
 // console.log(h1FunBusLogoHeading);
 h1FunBusLogoHeading.addEventListener('mouseover', function(){
-    // alert("you got me PARTNER!");
+    alert("you got me PARTNER!");
 })
 
 //  2. On Page load, console log fires. 
@@ -14,7 +14,7 @@ window.addEventListener('load', function (event){
 
 // 3. There is no field to enter keyboard characters so we are listening at the page level for key strokes pressed and alerting them to the user.
 window.addEventListener('keydown', function(event){
-    // alert(`${event.key} was pressed!`)
+    alert(`${event.key} was pressed!`)
 })
 
 // 4. As we select the input box, it is brought into focus and we change the background color to skyblue and change the form span instructions to NOTHING!.
