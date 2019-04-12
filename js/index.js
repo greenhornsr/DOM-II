@@ -78,31 +78,91 @@ textSelect.addEventListener('select', function(event){
 // displayInput.addEventListener('select', selectionLog);
 
 // 8. dblclick
+    // const hash = () => Math.floor(Math.random() * 1000).toString(36);
     const funBusImgDblClick = document.getElementById('fun-bus-img-header');
-    console.log(funBusImgDblClick);
+    // console.log(funBusImgDblClick);
     funBusImgDblClick.addEventListener('dblclick', function(){
-        funBusImgDblClick.src = "https://picsum.photos/800/240/?random";
+        // ARRON MARSHALL DBLCLICK EVENT - 
+        if (event.target.matches('img')) {
+            let random = hash();
+            console.log(event.target);
+            // event.target.nextElementSibling.innerText = random;
+            event.target.src = `https://picsum.photos/800/240?${random}`;
+          }
+        //   MY VERSION NO LONGER RELEVANT!
+        // funBusImgDblClick.src = `https://picsum.photos/800/240/?random`;
     })
 
     const letsGoDblClick = document.getElementById('lets-go');
     // console.log(letsGoDblClick);
     letsGoDblClick.addEventListener('dblclick', function(){
-        letsGoDblClick.src = "https://picsum.photos/376/282/?random";
+                // ARRON MARSHALL DBLCLICK EVENT - 
+                if (event.target.matches('img')) {
+                    let random = hash();
+                    console.log(event.target);
+                    // event.target.nextElementSibling.innerText = random;
+                    event.target.src = `https://picsum.photos/376/282?${random}`;
+                  }
+         //   MY VERSION NO LONGER RELEVANT!
+        // letsGoDblClick.src = "https://picsum.photos/376/282/?hash(let random=)";
     })
 
+    // Adventure Awaits IMG DblClick
+/*  // ORIGINAL EVENT I CREATED.  DOES NOT LOAD A NEW PIC AFTER FIRST DBLCLICK EVENT.
     // Adventure Awaits IMG DblClick
     const advAwaitsDblClick = document.getElementById('advawaits');
     // console.log(advAwaitsDblClick);
     advAwaitsDblClick.addEventListener('dblclick', function(){
         advAwaitsDblClick.src = "https://picsum.photos/376/282/?random";
     })
+*/
+    //   EVENT AARON MARSHALL CREATED USING THE hash FUNCTION HE MADE BELOW.  THIS ALLOWS FOR NEW IMAGES TO GENERATE AFTER EVERY DBLCLICK EVENT!  
+    const advAwaitsDblClick = document.getElementById('advawaits');
+    // console.log(advAwaitsDblClick);
+    advAwaitsDblClick.addEventListener('dblclick', function(event){
+        if (event.target.matches('img')) {
+            let random = hash();
+            console.log(event.target);
+            // event.target.nextElementSibling.innerText = random;
+            event.target.src = `https://picsum.photos/376/282?${random}`;
+          }
+    })
+
+function hash() {
+  // Get a *random* decimal between 0-1;
+  let randomDecimal = Math.random();
+  
+  // Multiply the decimal by a number to get a real number
+  // NOTE: In this case I'm using 1,000 to get a couple of letters in our end result but can be higher
+  let randomNumber = randomDecimal * 1000;
+  
+  // Floor our number (round down) to remove any remaining decimals
+  let wholeNumber = Math.floor(randomNumber);
+  
+  /*
+      Transform our number into base36. The toString method can take a radix<int> parameter to specify the number base.
+      E.g. Hex colors are base16, so if you got a random number between 0-255 and did toString(16) you would get a color hex
+           Binary is base2, so using toString(2) would give easy binary conversion
+      MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+  */
+  let randomHash = wholeNumber.toString(36);
+  return randomHash;
+}
 
 
     // Pick Your Destination IMG DblClick
     const pydDblClick = document.getElementById('pydest');
     // console.log(pydDblClick);
     pydDblClick.addEventListener('dblclick', function(){
-        pydDblClick.src = "https://picsum.photos/600/200/?random";
+        // ARRON MARSHALL DBLCLICK EVENT - 
+        if (event.target.matches('img')) {
+            let random = hash();
+            console.log(event.target);
+            // event.target.nextElementSibling.innerText = random;
+            event.target.src = `https://picsum.photos/600/200?${random}`;
+            }
+         // MY VERSION NO LONGER RELEVANT!
+        // pydDblClick.src = "https://picsum.photos/600/200/?random";
     })
 
 
